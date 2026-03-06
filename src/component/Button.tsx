@@ -1,5 +1,3 @@
-import { useState } from "react"
-
 interface ButtonProps{
 text: string
 onclick?: () => void
@@ -14,10 +12,10 @@ const defaultsyles = {
     cursor: 'pointer',
 }
 export function Button({text, onclick}: ButtonProps){
-     const [fullname, Setfullname] = useState('')
+     
     return(
         <>
-        <button onClick = {()=> console.log(fullname)}
+        <button onClick={onclick}
         style={defaultsyles} 
         className="bg-blue-300 text-white px-5 py-2 rounded hover:bg-blue-700 transition-colors">
             {text}
